@@ -1,0 +1,17 @@
+{
+ "name": "Wayne",
+ "profession": "Software Engineer",
+ "age": 26,
+ "residence": "Uzbekistan",
+ "adress": "S.Korea, Busan",
+ "language": ["Uzbek", "Korean", "English"],
+ "skills": ["HTML", "JS", "NodeJS", "CSS"],
+ "extra_skills": ["Bootstrap Materialize", "Styling Sass", "GIT Knowledg"],
+ "university": "Pusan National University",
+ "work_place": "IT Company",
+ "service_desc": "Amet minim ...",
+ "about_me": "Simple but Unique",
+ "city": "Namangan",
+ "title": ["what is it IDK"],
+"famous_name": ["Superman"]   
+}
