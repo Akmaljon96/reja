@@ -24,15 +24,15 @@ app.use(express.urlencoded({extended: true}));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-//4-Routing code
+//4-Routing code 
 app.post("/create-item", (req, res) => {
-    console.log(req);
-    res.json({ test: "success" });
+    //console.log(req);
+    //res.json({ test: "success" });
 });
 
 app.get('/author', (req, res) => {
     res.render("author", {user: user} );
-})
+});
 
 app.get("/", function(req, res) {
     console.log(req);
