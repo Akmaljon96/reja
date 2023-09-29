@@ -35,12 +35,12 @@ app.get('/author', (req, res) => {
 });
 
 app.get("/", function(req, res) {
-    console.log(req);
-  res.render("harid");
+    // console.log(req);
+  res.render("reja");
 });   
 
 const server = http.createServer(app); 
 let PORT =3000;
 server.listen(PORT, function() {
-    console.log(`The server is running succesfully on port: ${PORT}`);
+    console.log(`The server is running succesfully on port: ${PORT}, http://localhost:{PORT}`);
 });
