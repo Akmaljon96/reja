@@ -3,16 +3,6 @@ const express = require("express");
 const res = require("express/lib/response");
 const app = express();
 
-const fs = require("fs");
-
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if(err) {
-        console.log("ERROR:", err);
-    } else{
-        user = JSON.parse(data)
-    }
-});
 
 //MongoDB connect
 const db = require("./server").db();
@@ -30,8 +20,7 @@ app.set("view engine", "ejs");
 
 //4-Routing code 
 app.post("/create-item", (req, res) => {
-    //console.log(req);
-    //res.json({ test: "success" });
+
 });
 
 app.get('/author', (req, res) => {
@@ -39,8 +28,7 @@ app.get('/author', (req, res) => {
 });
 
 app.get("/", function(req, res) {
-    // console.log(req);
   res.render("reja");
 });   
 
-module.exportsv = app;
+module.exports = app;
