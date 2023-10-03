@@ -1,6 +1,6 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
-const res = require("express/lib/response");
+// const res = require("express/lib/response");
 const app = express();
 
 
@@ -30,9 +30,9 @@ app.post("/create-item", (req, res) => {
 
   //  console.log(req.body);
   
-// app.get('/author', (req, res) => {
+app.get('/author', (req, res) => {
 //     res.render("author", {user: user} );
-// });
+ });
 
 app.get("/", function(req, res) {
   console.log('user entered /');
@@ -43,7 +43,7 @@ app.get("/", function(req, res) {
        console.log(err);
        res.end("something went wrong");
       } else {
-        console.log(data);
+        // console.log(data);
         res.render("reja", { items: data });
       }
     });

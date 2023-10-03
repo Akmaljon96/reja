@@ -21,19 +21,21 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-doocument.getElementByI("create-form").addEventListener("submit", function (e) {
+doocument
+.getElementById("create-form")
+.addEventListener("submit", function (e) {
  e.preventDefault();
 
  axios
    .post("/create-item", { reja: createField.value })
-   .then((response) => {
+   .then(response => {
      document
        .getElementById("item-list")
        .insertAdjacentHTML("beforeend", itemTemplate(response.data));
      createField.value = "";
      createField.focus();
    })
-   .catch((err) => {
+   .catch(err => {
         console.log("Iltimos qaytadan harakat qiling!");
    });
 });

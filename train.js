@@ -1,16 +1,20 @@
- //  📌  E-TASK: E-Task: Shunday function tuzing, u bitta string argumentni qabul qilib osh stringni teskari qilib return qilsin
+// 📌  F-Task: findDoublers function tuzing, unga faqat bitta string argument pass bolib, agar stringda bir hil harf qatnashgan bolsa true, qatnashmasa false qaytarishi kerak.
+// masalan: getReverse("hello") return true return qiladi
 
-//masalan: getReverse("hello") return qilsin "olleh"
 
-function getReverse(inputString) {
-  return inputString.split('').reverse().join('');
+
+function findDoublers(str) {
+  for (let i = 0; i < str.length; i++) {
+    let currentChar = str[i];
+    if (str.indexOf(currentChar, i + 1) !== -1) {
+      return true;
+    }
+  }
+  return false;
 }
 
-var reversedString = getReverse("kiyikk");
-console.log(reversedString); 
-
-
-
+console.log(findDoublers("hello")); 
+console.log(findDoublers("nimadur"));
 
 
 
@@ -125,5 +129,17 @@ console.log(reversedString);
 //   });
 //   console.log("passed here 1");
   
+
+ //  📌  E-TASK: E-Task: Shunday function tuzing, u bitta string argumentni qabul qilib osh stringni teskari qilib return qilsin
+
+//masalan: getReverse("hello") return qilsin "olleh"
+
+// function getReverse(inputString) {
+//   return inputString.split('').reverse().join('');
+// }
+
+// var reversedString = getReverse("kiyikk");
+// console.log(reversedString); 
+
 
  
