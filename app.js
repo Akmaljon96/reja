@@ -21,24 +21,18 @@ app.set("view engine", "ejs");
 //4-Routing code 
 app.post("/create-item", (req, res) => {
   console.log('user entered /create-item');
+  const new_reja = req.body.reja;
+  db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+    console.log(data.ops);
+    res.json(data.ops[0]);
+  }); 
+});
 
   //  console.log(req.body);
-   const new_reja = req.body.reja;
-   db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-     if(err) {
-        console.log(err);
-        res.end("something went wrong");
-     } else {
-      console.log(data);
-      res.end("succussfully added");
-     }
-   });
-   
-});
-
-app.get('/author', (req, res) => {
-    res.render("author", {user: user} );
-});
+  
+// app.get('/author', (req, res) => {
+//     res.render("author", {user: user} );
+// });
 
 app.get("/", function(req, res) {
   console.log('user entered /');
